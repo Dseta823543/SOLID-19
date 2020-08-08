@@ -1,0 +1,284 @@
+prompt --application/pages/page_00002
+begin
+--   Manifest
+--     PAGE: 00002
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2020.03.31'
+,p_release=>'20.1.0.00.13'
+,p_default_workspace_id=>26293853277175009384
+,p_default_application_id=>95395
+,p_default_id_offset=>46234255895120286976
+,p_default_owner=>'SOLID192'
+);
+wwv_flow_api.create_page(
+ p_id=>2
+,p_user_interface_id=>wwv_flow_api.id(26668805928449914819)
+,p_name=>'Datos Personales'
+,p_step_title=>'Datos Personales'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_required_role=>'MUST_NOT_BE_PUBLIC_USER'
+,p_help_text=>unistr('Aqu\00ED puedes personalizar tu perfil.<br /><br />')
+,p_last_updated_by=>'KQUINONESA@UNSA.EDU.PE'
+,p_last_upd_yyyymmddhh24miss=>'20200730013628'
+);
+wwv_flow_api.create_report_region(
+ p_id=>wwv_flow_api.id(26668819928085915243)
+,p_name=>'Datos Personales'
+,p_template=>wwv_flow_api.id(26668722685742914547)
+,p_display_sequence=>10
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#:t-AVPList--leftAligned'
+,p_display_point=>'BODY'
+,p_item_display_point=>'BELOW'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'TABLE'
+,p_query_table=>'COR_USER'
+,p_query_where=>'upper(user_email) = upper(:APP_USER)'
+,p_include_rowid_column=>false
+,p_ajax_enabled=>'Y'
+,p_query_row_template=>wwv_flow_api.id(26668748004971914598)
+,p_query_num_rows=>15
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_show_nulls_as=>'-'
+,p_csv_output=>'N'
+,p_prn_output=>'N'
+,p_sort_null=>'L'
+,p_plug_query_strip_html=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739478613308717024)
+,p_query_column_id=>1
+,p_column_alias=>'ID'
+,p_column_display_sequence=>1
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739478789282717025)
+,p_query_column_id=>2
+,p_column_alias=>'USER_SEX'
+,p_column_display_sequence=>2
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739478816711717026)
+,p_query_column_id=>3
+,p_column_alias=>'USER_APELLIDO'
+,p_column_display_sequence=>3
+,p_column_heading=>'Apellido'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739478905637717027)
+,p_query_column_id=>4
+,p_column_alias=>'USER_NOMBRE'
+,p_column_display_sequence=>4
+,p_column_heading=>'Nombre'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479094875717028)
+,p_query_column_id=>5
+,p_column_alias=>'USER_DEPT'
+,p_column_display_sequence=>5
+,p_column_heading=>'Departamento'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479183444717029)
+,p_query_column_id=>6
+,p_column_alias=>'USER_PROV'
+,p_column_display_sequence=>6
+,p_column_heading=>'Provincia'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479200223717030)
+,p_query_column_id=>7
+,p_column_alias=>'USER_DISTR'
+,p_column_display_sequence=>7
+,p_column_heading=>'Distrito'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479323469717031)
+,p_query_column_id=>8
+,p_column_alias=>'USER_CPOSTAL'
+,p_column_display_sequence=>8
+,p_column_heading=>'Codigo Postal'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479432423717032)
+,p_query_column_id=>9
+,p_column_alias=>'USER_TLF'
+,p_column_display_sequence=>9
+,p_column_heading=>'Telefono'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479592987717033)
+,p_query_column_id=>10
+,p_column_alias=>'USER_LOCACION'
+,p_column_display_sequence=>10
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479642538717034)
+,p_query_column_id=>11
+,p_column_alias=>'LAT'
+,p_column_display_sequence=>11
+,p_column_heading=>'Latitud'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479772688717035)
+,p_query_column_id=>12
+,p_column_alias=>'LNG'
+,p_column_display_sequence=>12
+,p_column_heading=>'Longitud'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479821245717036)
+,p_query_column_id=>13
+,p_column_alias=>'USER_EMAIL'
+,p_column_display_sequence=>13
+,p_column_heading=>'E-mail'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739479950367717037)
+,p_query_column_id=>14
+,p_column_alias=>'USER_EMAIL_CHECK'
+,p_column_display_sequence=>14
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739480021975717038)
+,p_query_column_id=>15
+,p_column_alias=>'USER_CONTRA'
+,p_column_display_sequence=>15
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739480125978717039)
+,p_query_column_id=>16
+,p_column_alias=>'USER_PRIV'
+,p_column_display_sequence=>16
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(27739480266009717040)
+,p_query_column_id=>17
+,p_column_alias=>'ADMIN'
+,p_column_display_sequence=>17
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(26668828722941915312)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_api.id(26668732057249914558)
+,p_plug_display_sequence=>20
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_api.id(26668668650257914249)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_api.id(26668784781721914711)
+);
+wwv_flow_api.create_page_button(
+ p_id=>wwv_flow_api.id(26112704615797016412)
+,p_button_sequence=>40
+,p_button_plug_id=>wwv_flow_api.id(26668819928085915243)
+,p_button_name=>'Cancelar'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_api.id(26668783415762914708)
+,p_button_image_alt=>'Cancelar'
+,p_button_position=>'BELOW_BOX'
+,p_button_redirect_url=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:::'
+);
+wwv_flow_api.create_page_button(
+ p_id=>wwv_flow_api.id(27739480335989717041)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_api.id(26668819928085915243)
+,p_button_name=>'EDIT'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#:t-Button--iconRight'
+,p_button_template_id=>wwv_flow_api.id(26668783450886914708)
+,p_button_image_alt=>'Editar'
+,p_button_position=>'REGION_TEMPLATE_EDIT'
+,p_button_redirect_url=>'f?p=&APP_ID.:48:&SESSION.::&DEBUG.:RP,:P48_ID:&P2_ID.#ID#\#ID#\#ID#\#ID#\#ID#\'
+,p_icon_css_classes=>'fa-pencil-square'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(27739480831283717046)
+,p_name=>'P2_ID'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(26668819928085915243)
+,p_source=>'select ID from COR_USER where upper(user_email) = upper(:APP_USER)'
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_da_event(
+ p_id=>wwv_flow_api.id(26668829562927915315)
+,p_name=>'Edit Report - Dialog Closed'
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_api.id(26668819928085915243)
+,p_bind_type=>'bind'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_api.create_page_da_action(
+ p_id=>wwv_flow_api.id(26668830049653915321)
+,p_event_id=>wwv_flow_api.id(26668829562927915315)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_api.id(26668819928085915243)
+);
+wwv_flow_api.component_end;
+end;
+/

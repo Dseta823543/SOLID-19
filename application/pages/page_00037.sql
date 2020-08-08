@@ -1,0 +1,212 @@
+prompt --application/pages/page_00037
+begin
+--   Manifest
+--     PAGE: 00037
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2020.03.31'
+,p_release=>'20.1.0.00.13'
+,p_default_workspace_id=>26293853277175009384
+,p_default_application_id=>95395
+,p_default_id_offset=>46234255895120286976
+,p_default_owner=>'SOLID192'
+);
+wwv_flow_api.create_page(
+ p_id=>37
+,p_user_interface_id=>wwv_flow_api.id(26668805928449914819)
+,p_name=>'Solicitudes de Ayuda'
+,p_alias=>'SOLICITUDES-DE-AYUDA'
+,p_step_title=>'Solicitudes de Ayuda'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'DRONDONE@UNSA.EDU.PE'
+,p_last_upd_yyyymmddhh24miss=>'20200709051131'
+);
+wwv_flow_api.create_report_region(
+ p_id=>wwv_flow_api.id(55555100660955276403)
+,p_name=>'Apoyo solicitado'
+,p_template=>wwv_flow_api.id(26668722685742914547)
+,p_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#:t-Report--altRowsDefault:t-Report--rowHighlight'
+,p_new_grid_row=>false
+,p_new_grid_column=>false
+,p_display_point=>'BODY'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'TABLE'
+,p_query_table=>'COR_BUSCADOR'
+,p_query_where=>'BUSC_VOLUNT_FK = :P17_ID'
+,p_include_rowid_column=>false
+,p_display_when_condition=>'P37_ID'
+,p_display_condition_type=>'ITEM_IS_NOT_NULL'
+,p_ajax_enabled=>'Y'
+,p_query_row_template=>wwv_flow_api.id(26668745432404914594)
+,p_query_num_rows=>15
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_show_nulls_as=>'-'
+,p_query_num_rows_type=>'NEXT_PREVIOUS_LINKS'
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+,p_csv_output=>'N'
+,p_prn_output=>'N'
+,p_sort_null=>'L'
+,p_plug_query_strip_html=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882518070660469077)
+,p_query_column_id=>1
+,p_column_alias=>'ID'
+,p_column_display_sequence=>1
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882518486715469077)
+,p_query_column_id=>2
+,p_column_alias=>'BUSC_VOLUNT_FK'
+,p_column_display_sequence=>2
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882518894234469078)
+,p_query_column_id=>3
+,p_column_alias=>'BUSC_SEX'
+,p_column_display_sequence=>3
+,p_column_heading=>'Sexo'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882519219959469078)
+,p_query_column_id=>4
+,p_column_alias=>'BUSC_APELLIDO'
+,p_column_display_sequence=>4
+,p_column_heading=>'Apellidos'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882519659557469079)
+,p_query_column_id=>5
+,p_column_alias=>'BUSC_NOMBRE'
+,p_column_display_sequence=>5
+,p_column_heading=>'Nombre'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882520044367469080)
+,p_query_column_id=>6
+,p_column_alias=>'BUSC_DEPT'
+,p_column_display_sequence=>6
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882520445153469080)
+,p_query_column_id=>7
+,p_column_alias=>'BUSC_CPOSTAL'
+,p_column_display_sequence=>7
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882520819814469081)
+,p_query_column_id=>8
+,p_column_alias=>'BUSC_PROV'
+,p_column_display_sequence=>8
+,p_column_heading=>'Provincia'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882521295242469081)
+,p_query_column_id=>9
+,p_column_alias=>'BUSC_TLF'
+,p_column_display_sequence=>9
+,p_column_heading=>'Telefono'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882521695988469082)
+,p_query_column_id=>10
+,p_column_alias=>'BUSC_EMAIL'
+,p_column_display_sequence=>10
+,p_column_heading=>'Email'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882522059939469082)
+,p_query_column_id=>11
+,p_column_alias=>'BUSC_FREG'
+,p_column_display_sequence=>11
+,p_column_heading=>unistr('Fecha de creaci\00F3n:')
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882522464725469082)
+,p_query_column_id=>12
+,p_column_alias=>'BUSC_LOCACION'
+,p_column_display_sequence=>12
+,p_column_heading=>'Locacion'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882522805660469083)
+,p_query_column_id=>13
+,p_column_alias=>'BUSC_INFECT'
+,p_column_display_sequence=>13
+,p_column_heading=>'Infectado?'
+,p_use_as_row_header=>'N'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882523245641469083)
+,p_query_column_id=>14
+,p_column_alias=>'BUSC_PRIV'
+,p_column_display_sequence=>14
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882523670622469084)
+,p_query_column_id=>15
+,p_column_alias=>'LAT'
+,p_column_display_sequence=>15
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(28882524079488469084)
+,p_query_column_id=>16
+,p_column_alias=>'LNG'
+,p_column_display_sequence=>16
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.component_end;
+end;
+/
