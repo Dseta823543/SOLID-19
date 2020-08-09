@@ -52,12 +52,6 @@ wwv_flow_api.create_plugin_setting(
 ,p_plugin=>'NATIVE_COLOR_PICKER'
 ,p_attribute_01=>'modern'
 );
-wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(30469542900198450087)
-,p_plugin_type=>'ITEM TYPE'
-,p_plugin=>'PLUGIN_COM.INSUM.PLACECOMPLETE'
-,p_attribute_01=>'AIzaSyDxOg--lYgmTKxqpEevH4Id_TcPdH8deI8'
-);
 wwv_flow_api.component_end;
 end;
 /
